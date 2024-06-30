@@ -10,6 +10,7 @@
             color: white;
             font: normal 12pt Arial;
         }
+
     </style>
 </head>
 <body>
@@ -19,11 +20,19 @@
     <div id="msg">Clique em mim</div>
     <script>
      var corpo = window.document.body
+        /*pega os elementos da tag de nome p e guarda na vairável p1*/
        var p1 = window.document.getElementsByTagName('p')[1]
-       /*var d = window.document.getElementById('msg')
-       d.style.background = 'green'
-       d.innerText = 'Estou Aguardando...'
-       window.document.getElementById('msg').innerText = 'Olá!!'*/
+       /*pega os elementos  do id 'msg' e guarda da navariável d*/
+      /* var d = window.document.getElementById('msg')
+       /*troca a  cor de fundo da variável d para 'green'*/
+      /* d.style.background = 'green'
+       /*troca o texto da variavel d para 'Estou aguardando'*/
+       /*d.innerText = 'Estou Aguardando...'
+       /*troca o texto da variavel d para 'Olá'*/
+       /*window.document.getElementById('msg').innerText = 'Olá!!'*/
+       var d  = window.document.querySelector('div#msg')
+       d.style.background = 'blue'
+       
     </script>
 
     
