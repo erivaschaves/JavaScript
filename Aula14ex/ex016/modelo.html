@@ -11,34 +11,26 @@
         <h1>Vamos Contar</h1>
     </header>
     <section>
-            <div id="inicio">
+            <div id="dados">
                 <p>
                     Inicio:
-                    <input type="number" name="txtini" id="txtini" min="0" >
+                    <input type="number" name="inicio" id="txtini" min="0" >
+                    <p>
+                        Fim:
+                        <input type="number" name="fim" id="txtfim" min="0" >
+                    </p>
+                    <p>
+                        Passo:
+                        <input type="number" name="passo" id="txtpasso" min="1">
+                    </p>
+                    <p>
+                        <input type="button" value="Contar" onclick="contar()">
+                    </p>
                 </p>
             </div>
-        
-            <div id="fim">
-                <p>
-                    Fim:
-                    <input type="number" name="txtfim" id="txtfim" >
-                </p>
             
-            </div>
-        
-        
-            <div id="passo">
-                <p>
-                    Passo: 
-                    <input type="number" name="txtpasso" id="txtpasso" min="1" >
-                </p>
-            
-            </div>
-        
-        <input type="button" value="Contar" onclick="contar()">
-        <p>
             <div id="res">
-                Contando:
+                Preparando contagem...
 
             </div>
         </p>
