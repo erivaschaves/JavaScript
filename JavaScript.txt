@@ -1,0 +1,317 @@
+about:blank e clica em inspecionar(usar o console java script no navegador)
+Node Js
+
+'Oi'(Entre aspas simples)
+
+var nome = 'Erivaldo' (Atribuindo variável)
+
+ou
+
+let nome = 'Erivaldo' (Atribuindo variável)
+
+nome (mostrando variável)
+
+3 + 2 (Fazendo Soma Simples)
+
+.exit ( sair do node.js)
+
+Ctrl + Shift + ' (Abrir terminal no vscode)
+
+node (usar node no terminal)
+.exit ( sair do node.js)
+exit(sair do terminal)
+
+Ctrl + L ( Limpar tela)
+
+typeof nome (Tipo da variável)
+
+// (Number + Number) adição
+// (String + String) concatenação
+
+Number.parseInt(Converter Variável para Inteiro)
+Number.parseFloat(Converter variável para Real)
+Number(n)(Converter para numero)
+
+String.(n) ou ToString(Converter para String)
+
+'Eu estou aprendendo '  s (Usa Concatenação)
+`Eu estou aprendendo ${s}` (Usa template string)
+
+s.length (quantos caracteres a string tem)
+s.toUpperCase() (Converte Tudo para letras Maiusculas)
+s.toLowerCase() (Converte Tudo para letras Minusculas)
+
+n1.Fixed(2)(Converter o numero em duas casas decimais.)
+
+n1.Fixed(2).replace('.', ',') (Alterar ponto por virgula)
+
+n1.toLocaleString('pt-BR', {style:'currency', currency:'BRL'}) (Mostrar valor em Real)
+
+n1.toLocaleString('pt-BR', {style:'currency', currency:'USD'}) (Mostrar valor em Dolar)
+
+n1.toLocaleString('pt-BR', {style:'currency', currency:'EUR'})(Mostrar Valor em Euro)
+
+Operadores em JavaScript
+
++ (Adição)
+
+- (Subtração)
+
+* (Multiplicação)
+
+/ (Divisão Real)
+
+% (Resto Da Divisão inteira)
+
+**(Potenciação)
+
+Ordem de Precedência dos operadores aritméticos
+
+()
+**
+* / %
++ -
+
+Auto atribuição
+
+n+=4
+n-=5
+n*=4
+n/=2
+n**=2
+n%=5
+
+Incremento e Decremento
+
+var x = 5
+
+x = x + 1 é igual a x++
+
+x = x - 1 é igual a x--
+
+Operadores relacionais
+
+> (maior que)
+
+< (Menor que)
+
+>= (Maior ou igual)
+
+<= (Menor ou igual)
+
+== (igual)
+
+!= (Diferente)
+
+=== (Igualdade restrira)
+!== (desigualdade restrita) 
+
+5 == '5' (true)
+5 === '5' (false)
+
+Ordem de precedência
+! (negação)
+&& (conjunção)
+|| (disjunção)
+
+Ordem de precedência dos operadores
+
+Aritméticos
+Relacionais
+Lógicos
+
+Operador ternário
+
+? : 
+
+media > 7? 'APROVADO' : 'REPROVADO'
+
+DOM
+
+var p1 = window.document.getElementsByTagName('p')[1](pega os elementos da tag de nome p e guarda na variável p1)
+var d = window.document.getElementById('msg') (pega os elementos  do id 'msg' e guarda da navariável d)
+d.style.background = 'green' (troca a  cor de fundo da variável d para 'green')
+d.innerText = 'Estou Aguardando...' (troca o texto da variavel d para 'Estou aguardando')
+
+window.document.getElementById('msg').innerText = 'Olá!!' (troca o texto da variavel d para 'Olá')
+
+# (representa div no css, por ex div id= 'msg' é div#msg)
+
+. ( representa class no css, por ex div id= 'msg' é div.msg)
+
+var agora = new Date()
+var hora = agora.getHours() (pegar hora atual)
+
+Pexels(Site de fotos gratuitas)
+
+<body onload="carregar()"> (Chamar função ao carregar a página)
+
+var img = document.createElement('img') (Criando imagem via java script)
+        img.setAttribute('id','foto')
+
+res.appendChild(img)(Carregar imagem no java script)
+
+while e do While em JavaScript
+
+var c = 1
+do{
+    console.log('Tudo bem?')
+ c++
+
+}while(c<=6)
+
+var c = 1
+while(c<=3){
+    console.log('Tudo bem?')
+ c++
+}
+
+Depurador 
+aperta f5, terminal de depuração, digita a váriável a ser monitorada, clicar na linha de ponto de parada,
+apertar f10 para executar
+
+unicode emoji list (Site para emojis em java script)
+
+\u{1F603}(Formatação do emoji em java script)
+
+var item = document.createElement('option')(Criando uma tag em javaScript)
+
+Vetor em JavaScript
+
+var num = [5, 8, 2, 9, 3]
+
+console.log(`Nosso Vetor é ${num}`)
+
+console.log(`O Vetor tem ${num.length} posições`) (Tamanho do vetor)
+
+console.log(num[0]) (Mostrar Elemento da posição do vetor)
+
+num.sort()(Ordenar elementos do vetor)
+
+num.push(1) (Adiciona elemento 1 no final do vetor)
+
+for (var pos = 0; pos<num.length; pos++){
+    console.log(`A Posição ${pos} tem o valor ${num[pos]}`)
+}
+
+for in
+
+for(var pos in num){
+    console.log(`A Posição ${pos} tem o valor ${num[pos]}`)
+
+}
+
+var pos = num.indexOf(10)(Mostrar em que posição o valor está, caso não exista retorna -1)
+
+num.value = ''
+num.focus() (apagar valor do input após digitar) 
+
+Funções
+
+(Função de par ou ímpar)
+
+function parimpar(n){
+    if (n%2 == 0){
+        return 'Par!'
+    }else{
+        return 'Ímpar!'
+    }
+}
+
+console.log(parimpar(4))
+
+(Uma variável recebendo uma função) 
+
+
+var v = function(x){
+    return x * 2
+}
+console.log(v(5))
+
+(Função Fatorial)
+
+// 5! = 5 x 4 x 3 x 2 x 1 = 120
+function fatorial(n){
+    var fat = 1
+    for (c = n; c>1; c--){
+        fat *= c
+    }
+    return fat
+}
+console.log(fatorial(5))
+
+modularização
+
+expressões regulares (Regex)
+
+Json
+
+Ajax
+
+Nodejs
+
+Jquerry
+
+Angular
+
+Reactjs
+
+Objetos
+
+var amigo = {} (Declarando um objeto)
+
+PODCASTS INFO
+
+Pizza de dados
+
+Diocast
+
+Data Hackers
+
+Data Science Academy
+
+Ciência sem fim
+
+
+Sites de Busca de Emprego Gerais
+
+1.LinkedIn: Excelente para networking e busca de vagas. Permite conectar-se diretamente com recrutadores e empresas.
+
+2.Indeed: Um dos maiores sites de emprego do mundo, com muitas vagas de TI.
+
+3.Glassdoor: Além de listar vagas, oferece avaliações de empresas e informações sobre salários.
+
+4.Monster: Um dos sites de emprego mais antigos, com muitas oportunidades de TI.
+
+5.CareerBuilder: Outro site popular com muitas vagas na área de TI.
+
+Sites Especializados em TI
+
+1.Stack Overflow Jobs: Focado em desenvolvedores e profissionais de TI, com muitas vagas relevantes.
+
+2.GitHub Jobs: Ideal para desenvolvedores que usam GitHub.
+
+3.Dice: Um site especializado em carreiras de tecnologia.
+
+4.AngelList: Ótimo para encontrar vagas em startups de tecnologia.
+
+5.Crunchboard: Associado ao site TechCrunch, com muitas vagas em empresas de tecnologia
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
