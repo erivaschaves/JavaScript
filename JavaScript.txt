@@ -1,6 +1,8 @@
 about:blank e clica em inspecionar(usar o console java script no navegador)
 Node Js
 
+Segura o alt e e vai clicando para selecioar varios elementos de uma vez
+
 'Oi'(Entre aspas simples)
 
 var nome = 'Erivaldo' (Atribuindo variável)
