@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações numéricas</title>
+    <style>
+        body{
+            font: normal 17pt Arial;
+            color: blue;
+        }
+        input{
+            font: normal 17pt Arial;
+            width: 100px;
+            color: blue;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--Título-->
+    <h1>Operações Numéricas</h1>
+    <!--Criando labels ,inputs e botões-->
+    <label for="v1">Valor 1:</label>
+    <input type="number" name="v1" id="v1" value = "0" require>
+    <p>
+        <label for="v2">Valor 2:</label>
+        <input type="number" name="v2" id="v2" value = "0" require>
+    </p>
+    <p>
+        <label for="v3">Valor 3:</label>
+        <input type="number" name="v3" id="v3" value = "0" require>
+    </p>
+    <p><input type="button" value="Calcular" id="calcular" onclick="calcular()"></p>
+
+    <div id="res">Resultado</div>
+    <!--Definindo função Calcular-->
+    <script>
+        function calcular(){
+            //Pegado valores do input pelo id
+            var tn1 = window.document.getElementById('v1');
+            var tn2 = window.document.getElementById('v2');
+            var tn3 = window.document.getElementById('v3');
+            var res = window.document.getElementById ('res');
+            //Convertendo valores para tipo number
+            var v1 = Number(tn1.value);
+            var v2 = Number(tn2.value);
+            var v3 = Number(tn3.value);
+            // Validando valores e imprimindo resultados com parágrafos e concatenações
+            if (v1 > 0) {
+                res.innerHTML = `A raiz quadrada do valor ${v1} é: ${Math.sqrt(v1)}` ;
+            }else {
+                res.innerHTML = `O quadrado do valor ${v1} é: ${v1 * v1}`;
+            }
+            if (v2 > 10 && v2<100){
+                 res.innerHTML += `<p>O número ${v2} está entre 10 e 100 - intervalo permitido</p>`;
+            }else {
+                 res.innerHTML += `<p>O número ${v2} não está entre 0 e 100 - favor digitar um valor válido</p>`
+            }if (v3 < v2) {
+                 res.innerHTML += `<p>A diferença entre ${v2} e ${v3} é ${v2 - v3}</p>`
+            }else{
+                 res.innerHTML += `<p>O valor ${v3} + 1 é: ${v3 + 1}</p>`
+            }
+        }
+    </script>  
+</body>
+</html>
