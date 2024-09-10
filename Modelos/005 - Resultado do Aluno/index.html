@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Aluno</title>
+</head>
+<body>
+    <!--Título-->
+    <h1>Resultado do Aluno</h1>
+    <!--Criando labels ,inputs e botões-->
+        <form >
+            <label for="n1">Informe a Nota 1:</label>
+            <input type="number" name="n1" id="n1" required min="0" max="10" value="0" placeholder="Nota 1" >
+            <p>
+                <label for="n2">Informe a Nota 2:</label>
+                <input type="number"  name="n2" id="n2" required min="0" max="10" value="0"  placeholder="Nota 2" >
+            </p>
+            <p>
+                <label for="freq">Informe a Frequência:</label>
+                <input type="number" name="freq" id="freq" min="0" max="40" value="0" required placeholder="Frequência">
+            </p>
+            <input type="submit" value="Validar" onclick="validar()">
+            <input type="reset" value="Limpar">
+        </form>
+    <!--Exibindo Resultado-->
+    <div id="res">Resultado</div>
+    <!--Definindo função Validar-->
+    <script>
+        function validar(){
+            var tn1 = window.document.getElementById('n1');
+            var tn2 = window.document.getElementById('n2');
+            var tfreq = window.document.getElementById('freq');
+            var res = window.document.getElementById('res');
+            //Convertendo valores para tipo float
+            var n1 = Number.parseFloat(tn1.value);
+            var n2 = Number.parseFloat(tn2.value);
+            //Convertendo valores para tipo number
+            var freq = Number(tfreq.value);
+            var media = (n1 + n2) / 2;
+            // Validando o resultado do aluno
+            if (media >= 6 && freq >= (40* 0.75)){
+                res.innerHTML = `Sua média é ${media.toFixed(1)} com frequência de ${(100*freq)/40}% você foi aprovado`;
+            }else {
+                res.innerHTML = `Sua média é ${media.toFixed(1)} com frequência de ${(100*freq)/40}% você foi reprovado`; 
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
