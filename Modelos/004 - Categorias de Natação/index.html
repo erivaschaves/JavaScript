@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias de Natação</title>
+</head>
+<body>
+    <!--Título-->
+    <h1>Categorias de Natação</h1>
+    <!--Criando labels ,inputs e botões-->
+    <label for="id">Informe a Idade:</label>
+    <input type="number" name="id" id="id" min="0" required>
+    <input type="button" value="Validar" onclick="validar()">
+    <!--Exibindo Resultado-->
+    <div id="res">Resultado</div>
+<!--Definindo função Validar-->
+<script>
+    function validar (){
+        //Pegado valores do input pelo id
+        var id = window.document.getElementById('id');
+        //Convertendo valores para tipo number
+        var idade = Number(id.value);
+        var res = window.document.querySelector('div#res');
+        // Validando e Imprimindo a idade
+        if (idade < 5) {
+            res.innerHTML = "Não pode nadar";
+        }else if (idade >=5 && idade <=7){
+            res.innerHTML = "Infantil A";
+        }else if (idade >=8 && idade <=10){
+            res.innerHTML = "Infantil B";
+        }else if (idade >=11 && idade <=13){
+            res.innerHTML = "Juvenil A";
+        }else if (idade >=14 && idade <=17){
+            res.innerHTML = "Infantil B";
+        }else if (idade >=18){
+            res.innerHTML = "Sênior";
+        }
+    }
+</script>
+</body>
+</html>

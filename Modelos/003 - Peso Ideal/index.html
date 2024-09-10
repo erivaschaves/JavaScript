@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peso ideal</title>
+    <title>Peso ideal</title>   
 </head>
 <body>
+    <!--Título-->
     <h1>Cálculo de Peso Ideal</h1>
+    <!--Criando labels ,inputs e botões-->
     <label for="alt">Altura</label>
     <input type="number" name="alt" id="alt" value="0" required>
     <fieldset>
@@ -17,21 +19,23 @@
         ">Feminino</label>
     </fieldset>
     <p><input type="button" value="Calcular" onclick="calcular()"></p>
-
+    <!--Mostrando resultado-->
     <div id="res">Resultado</div>
-
-<script>
+    <!--Definindo função Calcular-->
+    <script>
     function calcular(){
+        //Pegado valores do input pelo id
         var talt = window.document.getElementById('alt');
+        //Convertendo valores para tipo number
         var alt = Number(talt.value)
         var res = window.document.getElementById('res');
+        // Validando a opção marcada e exbindo com 2 casas decimais com toFixed
         if( window.document.getElementById('mas').checked) {
-            res.innerHTML = `Seu peso ideal é: ${(72.7 * alt) - 58} meu jovem.`;
+            res.innerHTML = `Seu peso ideal é: ${((72.7 * alt) - 58).toFixed(2)} meu jovem.`;
         }else{
-            res.innerHTML = `Seu peso ideal é: ${(62.1 * alt) - 44.7} minha jovem.`; 
+            res.innerHTML = `Seu peso ideal é: ${((62.1 * alt) - 44.7).toFixed(2)} minha jovem.`; 
         }
     }
-</script>
-    
+    </script>  
 </body>
 </html>

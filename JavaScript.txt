@@ -132,6 +132,7 @@ DOM
 
 var p1 = window.document.getElementsByTagName('p')[1](pega os elementos da tag de nome p e guarda na variável p1)
 var d = window.document.getElementById('msg') (pega os elementos  do id 'msg' e guarda da navariável d)
+var tn2 = window.document.querySelector('input#txtn2') (pega elementos do input txtn2)
 d.style.background = 'green' (troca a  cor de fundo da variável d para 'green')
 d.innerText = 'Estou Aguardando...' (troca o texto da variavel d para 'Estou aguardando')
 
