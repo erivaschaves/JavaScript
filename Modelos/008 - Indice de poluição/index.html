@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice de Poluição</title>
+</head>
+<body>
+    <!--Título-->
+    <h1>Índice de Poluição</h1>
+    <!--Criando labels ,inputs e botões-->
+    <form>
+        <p>
+            <label for="num">Informe o Indice: </label>
+            <input type="number" name="num" id="num" min="0" required>
+        </p>
+        <p>
+            <input type="button" value="Validar" onclick="validar()">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <!--Exibindo Resultados-->
+    <div id="res">Resultado</div>
+    <!--Definindo função Validar-->
+    <script>
+        function validar(){
+        var tnum = window.document.getElementById('num');
+        var res = window.document.getElementById ('res');
+        //Convertendo valor para tipo float
+        var num = Number.parseFloat(tnum.value);
+        // Validando Índice de Poluição
+        if (tnum.value.length == 0){
+            res.innerHTML = "Favor digitar um valor."
+        }else if (num < 0.3){
+            res.innerHTML = `Índice de poluição em <strong>${num}</strong>, não é necessário suspender as atividades.`;
+        }else if (num >= 0.3 && num < 0.4){
+            res.innerHTML = `Índice de poluição em <strong>${num}</strong>, 1º grupo suspende as atividades.`;
+        }else if (num >= 0.4 && num < 0.5){
+            res.innerHTML = `Índice de poluição em <strong>${num}</strong>, 1º e 2º grupos suspendem as atividades.`;
+        }else if (num >= 0.5){
+            res.innerHTML = `Índice de poluição em <strong>${num}</strong>, todos os grupos suspendem as atividades.`;
+        }
+    }
+    </script>
+    
+</body>
+</html>
