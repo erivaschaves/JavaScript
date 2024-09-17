@@ -12,18 +12,18 @@
     <form>
         <p>
             <label for="valor">Informe o valor depositado:</label>
-            <input type="number" name="valor" id="valor" required min="0" value="0">
+            <input type="number" name="valor" id="valor" min="1" required>
         </p>
         <p>
             <label for="taxa">Informe o juros anual:</label>
-            <input type="number" name="taxa" id="taxa" required min="0" max="100" value="0">
+            <input type="number" name="taxa" id="taxa"  min="0" max="100" required>
         </p>
         <p>
             <label for="anos">Anos de acumulo:</label>
-            <input type="number" name="anos" id="anos" required min="0" value="0">
+            <input type="number" name="anos" id="anos" min="0" required >
         </p>
         <p><input type="button" value="Calcular" onclick="calcular()">
-            <input type="reset" value="Limpar">
+           <input type="reset" value="Limpar">
         </p>
     </form>
     <!--Exibindo Resultados-->
@@ -31,7 +31,7 @@
     <!--Definindo função Calcular-->
     <script>
         function calcular(){
-            // Pegando valores do input pelo id
+            //Pegando valores do input pelo id
             tvalor = window.document.getElementById('valor');
             ttaxa = window.document.getElementById('taxa');
             tanos = window.document.getElementById('anos');

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saldo Médio</title>
+</head>
+<body>
+    <!--Título-->
+    <h1>Saldo Médio</h1>
+    <!--Criando Formulário,labels ,inputs e botões-->
+    <form>
+        <label for="saldo">Informe o saldo médio do cliente: </label>
+        <input type="number" name="saldo" id="saldo" min="0" required >
+        <p>
+            <input type="button" value="Calcular" onclick="calcular()">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <!--Exibindo Resultados-->
+    <div id="res">Resultado</div>
+    <!--Definindo função Calcular-->
+    <script>
+        function calcular(){
+        //Pegando valores do input pelo id {
+            tsaldo = window.document.getElementById ('saldo');
+            res = window.document.getElementById ('res');
+            //Convertendo valor para tipo float
+            saldo = Number.parseFloat(tsaldo.value);
+             //Validando valores vazios, saldo e crédito
+            if (tsaldo.value.legth == 0){
+                res.innerHTML = "Favor Digitar um valor";
+            }else if (saldo <=200.99){
+                res.innerHTML = "Nenhum crédito";
+            }else if (saldo >=201 && saldo<=400){
+                credito = saldo * 0.20;
+                // Exibindo o valores em Real.
+                res.innerHTML = `O saldo médio é: ${saldo.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}<br> O valor do crédito é: ${credito.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`;
+            }else if (saldo >= 401 && saldo <= 600){
+                credito = saldo * 0.30;
+                res.innerHTML = `O saldo médio é: ${saldo.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}<br> O valor do crédito é: ${credito.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`;
+            }else if (saldo > 600){
+                credito = saldo * 0.40;
+                res.innerHTML = `O saldo médio é: ${saldo.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}<br> O valor do crédito é: ${credito.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`;
+            }
+        }
+    </script>
+    
+</body>
+</html>
