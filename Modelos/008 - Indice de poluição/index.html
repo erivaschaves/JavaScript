@@ -28,7 +28,7 @@
         var res = window.document.getElementById ('res');
         //Convertendo valor para tipo float
         var num = Number.parseFloat(tnum.value);
-        // Validando Índice de Poluição
+        // Validando Índice de Poluição e valores vazios
         if (tnum.value.length == 0){
             res.innerHTML = "Favor digitar um valor."
         }else if (num < 0.3){

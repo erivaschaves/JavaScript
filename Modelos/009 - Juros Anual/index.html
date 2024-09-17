@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juros Anual</title>
+</head>
+<body>
+    <!--Título-->
+    <h1>Juros Anual</h1>
+    <!--Criando Formulário,labels ,inputs e botões-->
+    <form>
+        <p>
+            <label for="valor">Informe o valor depositado:</label>
+            <input type="number" name="valor" id="valor" required min="0" value="0">
+        </p>
+        <p>
+            <label for="taxa">Informe o juros anual:</label>
+            <input type="number" name="taxa" id="taxa" required min="0" max="100" value="0">
+        </p>
+        <p>
+            <label for="anos">Anos de acumulo:</label>
+            <input type="number" name="anos" id="anos" required min="0" value="0">
+        </p>
+        <p><input type="button" value="Calcular" onclick="calcular()">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <!--Exibindo Resultados-->
+    <div id="res">Resultado</div>
+    <!--Definindo função Calcular-->
+    <script>
+        function calcular(){
+            // Pegando valores do input pelo id
+            tvalor = window.document.getElementById('valor');
+            ttaxa = window.document.getElementById('taxa');
+            tanos = window.document.getElementById('anos');
+            res = window.document.getElementById('res');
+            //Validando valores vazios
+            if (tvalor.value.length == 0 || ttaxa.value.length == 0 || tanos.value.length == 0 ){
+            res.innerHTML = "Favor digitar um valor."
+        }else{
+            //Convertendo valor para tipo float
+            valor = Number.parseFloat(tvalor.value);
+            taxa = Number.parseFloat(ttaxa.value);
+            //Convertendo valor para tipo Number
+            anos = Number(tanos.value);
+            juros = ((taxa/100) + 1);
+            acumulo = ((juros * valor) * anos);
+            // Exibindo o valor em Real.
+            res.innerHTML = `O Valor acumulado é: ${acumulo.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}.`;
+        }
+        }
+    </script>
+    
+</body>
+</html>
