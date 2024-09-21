@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peso ideal</title>   
+    <title>Peso ideal</title>
+    <!--Carrengo estilo css-->
+    <link rel="stylesheet" href="style.css">  
 </head>
 <body>
     <!--Título-->
@@ -18,24 +20,13 @@
         <input type="radio" name="sexo" id="fem"  value="fem" ><label for="fem
         ">Feminino</label>
     </fieldset>
-    <p><input type="button" value="Calcular" onclick="calcular()"></p>
+    <p>
+        <input type="button" value="Calcular" onclick="calcular()">
+        <input type="submit" value="Limpar" onclick="limpar()">
+    </p>
     <!--Mostrando resultado-->
     <div id="res">Resultado</div>
     <!--Definindo função Calcular-->
-    <script>
-    function calcular(){
-        //Pegado valores do input pelo id
-        var talt = window.document.getElementById('alt');
-        //Convertendo valores para tipo number
-        var alt = Number(talt.value)
-        var res = window.document.getElementById('res');
-        // Validando a opção marcada e exbindo com 2 casas decimais com toFixed
-        if( window.document.getElementById('mas').checked) {
-            res.innerHTML = `Seu peso ideal é: ${((72.7 * alt) - 58).toFixed(2)} meu jovem.`;
-        }else{
-            res.innerHTML = `Seu peso ideal é: ${((62.1 * alt) - 44.7).toFixed(2)} minha jovem.`; 
-        }
-    }
-    </script>  
+    <script src="script.js"></script>  
 </body>
 </html>
