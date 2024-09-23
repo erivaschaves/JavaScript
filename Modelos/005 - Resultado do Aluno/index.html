@@ -21,35 +21,17 @@
                 <input type="number" name="freq" id="freq" min="0" max="40" value="0" required placeholder="Frequência">
             </p>
             <input type="button" value="Validar" onclick="validar()">
-            <input type="reset" value="Limpar">
+            <input type="reset" value="Limpar" onclick="limpar()">
         </form>
     <!--Exibindo Resultado-->
     <div id="res">Resultado</div>
-    <!--Definindo função Validar-->
-    <script>
-        function validar(){
-            //Pegando valores digitados no input
-            var tn1 = window.document.getElementById('n1');
-            var tn2 = window.document.getElementById('n2');
-            var tfreq = window.document.getElementById('freq');
-            var res = window.document.getElementById('res');
-            //Convertendo valores para tipo float
-            var n1 = Number.parseFloat(tn1.value);
-            var n2 = Number.parseFloat(tn2.value);
-            //Convertendo valores para tipo number
-            var freq = Number(tfreq.value);
-            var media = (n1 + n2) / 2;
-            // Validando valores faltantes e o resultado do aluno
-            if (tn1.value.length == 0 || tn2.value.length == 0 ||tfreq.value.length == 0){
-                res.innerHTML = "Faltam Dados";  
-            }else if (media >= 6 && freq >= (40* 0.75)){
-                res.innerHTML = `Sua média é ${media.toFixed(1)} com frequência de ${(100*freq)/40}% você foi aprovado`;
-            }else{
-                res.innerHTML = `Sua média é ${media.toFixed(1)} com frequência de ${(100*freq)/40}% você foi reprovado`; 
-            }
-        }
-    </script>
-
-    
+    <h2>Regras de execução do programa</h2>
+    <ul>
+        <li>Não serão permitidos valores vazios ou não numéricos.</li>
+        <li>São 40 aulas, para aprovação a frequência deve ser 75%.</li>
+        <li>A média é aritmética de no mínimo 6.0 para aprovação.</li>
+    </ul>
+    <!--Definindo script da página-->
+    <script src="script.js"></script>    
 </body>
 </html>

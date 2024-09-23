@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categorias de Natação</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!--Título-->
@@ -11,32 +12,58 @@
     <!--Criando labels ,inputs e botões-->
     <label for="id">Informe a Idade:</label>
     <input type="number" name="id" id="id" min="0" required>
-    <input type="button" value="Validar" onclick="validar()">
+    <p>
+        <input type="button" value="Validar" onclick="validar()">
+        <input type="reset" value="Limpar" onclick="limpar()">
+    </p>
     <!--Exibindo Resultado-->
     <div id="res">Resultado</div>
-<!--Definindo função Validar-->
-<script>
-    function validar (){
-        //Pegado valores do input pelo id
-        var id = window.document.getElementById('id');
-        //Convertendo valores para tipo number
-        var idade = Number(id.value);
-        var res = window.document.querySelector('div#res');
-        // Validando e Imprimindo a idade
-        if (idade < 5) {
-            res.innerHTML = "Não pode nadar";
-        }else if (idade >=5 && idade <=7){
-            res.innerHTML = "Infantil A";
-        }else if (idade >=8 && idade <=10){
-            res.innerHTML = "Infantil B";
-        }else if (idade >=11 && idade <=13){
-            res.innerHTML = "Juvenil A";
-        }else if (idade >=14 && idade <=17){
-            res.innerHTML = "Infantil B";
-        }else if (idade >=18){
-            res.innerHTML = "Sênior";
-        }
-    }
-</script>
+    <h2>Regras de execução do programa</h2>
+    <ul>
+        <li>Não serão permitidos valores vazios ou não numéricos.</li>
+    </ul>
+    <!--Tabela Com categorias de natação-->
+    <table>
+        <caption>Tabela com categorias de natação</caption>
+        <!--Cabeçalho da Tabela-->
+        <thead>
+            <th scope="col">Idade</th>
+            <th scope="row" style="width: 50px;">Categoria</th>
+        </thead>
+        <!--Corpo da Tabela-->
+        <tbody>
+            <!--Criando linha e itens-->
+            <tr>
+                <td>Menor de 5 anos</td>
+                <td>Não pode nadar</td>
+            </tr>
+            <tr>
+                <td>Entre 5 e 7 anos</td>
+                <td>Infantil A</td>
+            </tr>
+            <tr>
+                <td>Entre 8 e 10 anos</td>
+                <td>Infantil B</td>
+            </tr>
+            <tr>
+                <td>entre 11 e 13 anos</td>
+                <td>Juvenil A</td>
+            </tr>
+            <tr>
+                <td>entre 11 e 13 anos</td>
+                <td>Juvenil A</td>
+            </tr>
+            <tr>
+                <td>entre 14 e 17 anos</td>
+                <td>Juvenil B</td>
+            </tr>
+            <tr>
+                <td>18 anos ou acima</td>
+                <td>Sênior</td>
+            </tr>
+        </tbody>
+    </table>
+<!--Definindo script da página-->
+<script src="script.js"></script>
 </body>
 </html>

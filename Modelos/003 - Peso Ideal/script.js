@@ -12,7 +12,7 @@ function calcular(){
         res.innerHTML = `Seu peso ideal é: ${((62.1 * alt) - 44.7).toFixed(2)} KG minha jovem.`; 
     }
 }
-
+//Definindo função limpar
 function limpar(){
     var inputVal = window.document.querySelector('input[type=Number]');
     inputVal.value = " ";

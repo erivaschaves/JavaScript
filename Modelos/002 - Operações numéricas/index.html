@@ -12,14 +12,14 @@
     <h1>Operações Numéricas</h1>
     <!--Criando labels ,inputs e botões-->
     <label for="v1">Valor 1:</label>
-    <input type="number" name="v1" id="v1" value = "0" require>
+    <input type="number" name="v1" id="v1" value ="0" require>
     <p>
         <label for="v2">Valor 2:</label>
-        <input type="number" name="v2" id="v2" value = "0" require>
+        <input type="number" name="v2" id="v2" value ="0" require>
     </p>
     <p>
         <label for="v3">Valor 3:</label>
-        <input type="number" name="v3" id="v3" value = "0" require>
+        <input type="number" name="v3" id="v3" value ="0" require>
     </p>
     <p>
         <input type="button" value="Calcular" id="calcular" onclick="calcular()">
@@ -27,6 +27,14 @@
     </p>
     <!--Mostrando resultado-->
     <div id="res">Resultado</div>
+    <!--Lista de regras de execução do programa-->
+    <h2>Regras de execução do programa</h2>
+    <ul>
+        <li>Não serão permitidos valores vazios ou não numéricos.</li>
+        <li>Caso o valor 1 seja maior que 0 será impressa sua raiz quadrada, caso contrário seu quadrado.</li>
+        <li>No valor 2, somente serão permitidos valores entre 10 e 100.</li>
+        <li>Caso valor 3 seja maior que o valor 2, será exibida sua diferença, caso contrário será somado 1 ao valor 3.</li>
+    </ul>
     <!--Definindo Java script da página-->
     <script src="script.js"></script>  
 </body>

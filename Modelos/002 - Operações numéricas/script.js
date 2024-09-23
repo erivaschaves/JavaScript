@@ -11,13 +11,13 @@ function calcular(){
     var v3 = Number(tn3.value);
     // Validando valores e imprimindo resultados com parágrafos e concatenações
     if (tn1.value.length == 0 || tn2.value.length == 0 || tn3.value.length == 0 ){
-        res.innerHTML = "Favor Digitar um valor válido";
+        res.innerHTML = "Favor Digitar um valor válido!!";
     }else { if (v1 > 0) {
-        res.innerHTML = `A raiz quadrada do valor ${v1} é: ${Math.sqrt(v1)}` ;
+        res.innerHTML = `A raiz quadrada do valor ${v1} é: ${Math.sqrt(v1).toFixed(2)}` ;
     }else {
         res.innerHTML = `O quadrado do valor ${v1} é: ${v1 * v1}`;
     }
-    if (v2 > 10 && v2<100){
+    if (v2 >= 10 && v2<=100){
          res.innerHTML += `<p>O número ${v2} está entre 10 e 100 - intervalo permitido</p>`;
     }else {
          res.innerHTML += `<p>O número ${v2} não está entre 10 e 100 - favor digitar um valor válido</p>`
