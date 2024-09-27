@@ -12,53 +12,28 @@
         <form>
             <p>
                 <label for="v1">Informe o Valor 1: </label>
-                <input type="number" name="v1" id="v1" required>
+                <input type="number" name="v1" id="v1" value="0" required>
             </p>
             <p>
                 <label for="v2">Informe o Valor 2: </label>
-                <input type="number" name="v2" id="v2" required>
+                <input type="number" name="v2" id="v2" value="0" required>
             </p>
             <p>
                 <label for="v3">Informe o Valor 3: </label>
-                <input type="number" name="v3" id="v3" required>
+                <input type="number" name="v3" id="v3" value="0" required>
             </p>
             <p>
                 <input type="button" value="Validar" onclick="validar()">
-                <input type="reset" value="Limpar">
+                <input type="reset" value="Limpar" onclick="limpar()">
             </p>
         </form>
     
     <!--Exibindo Resultado-->
     <div id="res">Resultado</div>
 
-    <!--Definindo função Validar-->
-    <script>
-        function validar(){
-            //Pegando valores digitados no input
-            var tn1 = window.document.getElementById('v1');
-            var tn2 = window.document.getElementById('v2');
-            var tn3 = window.document.getElementById('v3');
-            var res = window.document.getElementById('res');
-            //Convertendo valores para tipo number
-            var v1 = Number(tn1.value);
-            var v2 = Number(tn2.value);
-            var v3 = Number(tn3.value);
-            var men = v1;
-            // Validando valores faltantes e menor valor. 
-            if (tn1.value.length == 0 || tn2.value.length == 0 ||tn3.value.length == 0){
-                res.innerHTML = 'Faltam Dados';
-            }else if (v1 == v2 && v2 == v3){
-                res.innerHTML = "Os Valores são iguais";
-            }else if (v2 < v1 && v2 < v3){
-                men = v2;
-                res.innerHTML = `O Valor menor é ${men}`;
-            }else if (v3 < v1 && v3 < v2){
-                men = v3;
-                res.innerHTML = `O Valor menor é ${men}`;
-            }else {
-                res.innerHTML = `O Valor menor é ${men}`;   
-            }
-        }
+    <!--Definindo scriptda página-->
+    <script src="script.js">
+       
     </script>
 </body>
 </html>
