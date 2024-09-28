@@ -8,50 +8,36 @@
 <body>
     <!--Título-->
     <h1>Juros Anual</h1>
-    <!--Criando Formulário,labels ,inputs e botões-->
-    <form>
+    <!--Criando labels ,inputs e botões-->
         <p>
             <label for="valor">Informe o valor depositado:</label>
-            <input type="number" name="valor" id="valor" min="1" required>
+            <input type="number" name="valor" id="valor" value="1" min="1"  required>
         </p>
         <p>
             <label for="taxa">Informe o juros anual:</label>
-            <input type="number" name="taxa" id="taxa"  min="0" max="100" required>
+            <input type="number" name="taxa" id="taxa" value="0" min="0" max="100" >
         </p>
         <p>
             <label for="anos">Anos de acumulo:</label>
-            <input type="number" name="anos" id="anos" min="0" required >
+            <input type="number" name="anos" id="anos" value="0" min="0" required >
         </p>
         <p><input type="button" value="Calcular" onclick="calcular()">
-           <input type="reset" value="Limpar">
+           <input type="reset" value="Limpar" onclick="limpar()">
         </p>
-    </form>
+
     <!--Exibindo Resultados-->
     <div id="res">Resultado</div>
-    <!--Definindo função Calcular-->
-    <script>
-        function calcular(){
-            //Pegando valores do input pelo id
-            tvalor = window.document.getElementById('valor');
-            ttaxa = window.document.getElementById('taxa');
-            tanos = window.document.getElementById('anos');
-            res = window.document.getElementById('res');
-            //Validando valores vazios
-            if (tvalor.value.length == 0 || ttaxa.value.length == 0 || tanos.value.length == 0 ){
-            res.innerHTML = "Favor digitar um valor."
-        }else{
-            //Convertendo valor para tipo float
-            valor = Number.parseFloat(tvalor.value);
-            taxa = Number.parseFloat(ttaxa.value);
-            //Convertendo valor para tipo Number
-            anos = Number(tanos.value);
-            juros = ((taxa/100) + 1);
-            acumulo = ((juros * valor) * anos);
-            // Exibindo o valor em Real.
-            res.innerHTML = `O Valor acumulado é: ${acumulo.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}.`;
-        }
-        }
-    </script>
+    
+    <!--Regras de execução do programa-->
+    <h2>Regras de execução do programa</h2>
+    <ul>
+        <li>Não serão permitidos valores vazios ou não numéricos.</li>
+        <li>O valor de depositado mínimo é 1.</li>
+        <li>O juros anual deve estar entre 0 e 100%.</li>
+
+    </ul>
+    <!--Definindo script da página-->
+    <script src="script.js"></script>
     
 </body>
 </html>

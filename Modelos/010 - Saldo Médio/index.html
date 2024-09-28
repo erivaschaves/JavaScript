@@ -4,47 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saldo Médio</title>
+    <!--Carregando estilo css da página-->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!--Título-->
     <h1>Saldo Médio</h1>
-    <!--Criando Formulário,labels ,inputs e botões-->
-    <form>
+    <!--Criando labels ,inputs e botões-->
         <label for="saldo">Informe o saldo médio do cliente: </label>
-        <input type="number" name="saldo" id="saldo" min="0" required >
+        <input type="number" name="saldo" id="saldo" min="0" value="1" required >
         <p>
             <input type="button" value="Calcular" onclick="calcular()">
-            <input type="reset" value="Limpar">
+            <input type="reset" value="Limpar" onclick="limpar()">
         </p>
-    </form>
     <!--Exibindo Resultados-->
     <div id="res">Resultado</div>
-    <!--Definindo função Calcular-->
-    <script>
-        function calcular(){
-        //Pegando valores do input pelo id {
-            tsaldo = window.document.getElementById ('saldo');
-            res = window.document.getElementById ('res');
-            //Convertendo valor para tipo float
-            saldo = Number.parseFloat(tsaldo.value);
-             //Validando valores vazios, saldo e crédito
-            if (tsaldo.value.legth == 0){
-                res.innerHTML = "Favor Digitar um valor";
-            }else if (saldo <=200.99){
-                res.innerHTML = "Nenhum crédito";
-            }else if (saldo >=201 && saldo<=400){
-                credito = saldo * 0.20;
-                // Exibindo o valores em Real.
-                res.innerHTML = `O saldo médio é: ${saldo.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}<br> O valor do crédito é: ${credito.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`;
-            }else if (saldo >= 401 && saldo <= 600){
-                credito = saldo * 0.30;
-                res.innerHTML = `O saldo médio é: ${saldo.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}<br> O valor do crédito é: ${credito.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`;
-            }else if (saldo > 600){
-                credito = saldo * 0.40;
-                res.innerHTML = `O saldo médio é: ${saldo.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}<br> O valor do crédito é: ${credito.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`;
-            }
-        }
-    </script>
+    
+    <!--Regras de execução do programa-->
+    <h2>Regras de execução do programa</h2>
+    <ul>
+        <li>Não serão permitidos valores vazios ou não numéricos.</li>
+        <li>O saldo médio deve ser no mínimo 1.</li>
+        <li>Dependendo do valor do saldo,haverá crédito conforme a seguinte tabela.</li>
+
+    </ul>
+    <!--Tabela de crédito por saldo-->
+    <table>
+        <caption>Tabela de crédito por saldo</caption>
+        <!--Cabeçalho da Tabela-->
+        <thead>
+            <th scope="col">Saldo</th>
+            <th scope="row" style="width: 50px;">Crédito</th>
+        </thead>
+        <!--Corpo da Tabela-->
+        <tr>
+            <td>Menor de que R$ 201.</td>
+            <td>Nenhum crédito.</td>
+        </tr>
+
+        </tr>
+            <td>Entre R$201 e R$400.</td>
+            <td>Crédito de 20%.</td>
+        </tr>
+
+        </tr>
+            <td>Entre R$401 e R$600</td>
+            <td>Crédito de 30%.</td>
+        </tr>
+
+        </tr>
+            <td>Maior que R$600</td>
+            <td>Crédito de 40%.</td>
+        </tr>
+    </table>
+    <!--Definindo script da página-->
+    <script src="script.js"></script>
     
 </body>
 </html>

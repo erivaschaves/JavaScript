@@ -1,0 +1,16 @@
+@charset "UTF-8";
+table {
+    width: 500px;
+    border-collapse: collapse;
+    position: relative;
+}
+td, th {
+    border: 1px solid black;
+    padding: 5px;
+}
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    background-color: lightgray;
+}
