@@ -11,7 +11,7 @@ function subtrair(){
     var s = n1 - n2;
     //Caso de valores vazios.
     if (tn1.value.length == 0 || tn2.value.length == 0 ){
-        res.innerHTML = "Favor Digitar um valor válido";
+        res.innerHTML = "Favor Digitar um valor válido.";
     }else
     //Caso n1 seja maior que n2. 
     if(n1>n2){

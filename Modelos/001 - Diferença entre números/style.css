@@ -1,14 +1,24 @@
 @charset "UTF-8";
 
 body{
-    font: normal 17pt Arial;
+    font: normal 15pt Arial;
     color: red;
+    text-align: center;
 }
 input{
-    font: normal 17pt Arial;
+    font: normal 15pt Arial;
     width: 100px;
-    color: red;
+    color:red;
+    align-items: center;
 }
 div#res{
     margin-top: 20px;
+}
+#subtrair, #limpar {
+   padding: 10px;
+   background: blue;/*Definindo cor de fundo do botão*/
+   border: none;
+   color: white;
+   border-radius: 10px;
+   cursor: pointer;/*Modifica o cursor do mouse para pointer*/
 }
