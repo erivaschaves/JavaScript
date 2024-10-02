@@ -9,22 +9,27 @@
 <link rel="stylesheet" href="style.css">
 <body>
     <!--Título-->
-    <h1>Diferença entre valores</h1>
-    <!--Criando inputs e botões--> 
-            <input type="number" name="n1" id="n1" value="0" required>
-            <input type="number" name="n2" id="n2" value="0" required>
+    <section>
+        <h1>Diferença entre valores</h1>
+        <!--Criando inputs e botões-->
+            <p>
+                <input type="number" name="n1" id="n1" value="0" required>
+                <input type="number" name="n2" id="n2" value="0" required>
+            </p>
             <p>
                 <input type="button" value="Subtrair" id="subtrair" onclick="subtrair()">
                 <input type="reset" value="Limpar" id="limpar" onclick="limpar()">
-            </p>   
-    <!--Exibindo Resultado-->
-     <div id="res">Resultado</div>
+            </p>
+        <!--Exibindo Resultado-->
+        <div id="res">Resultado</div>
+    
      <!--Lista de regras de execução do programa-->
      <h2>Regras de execução do programa</h2>
      <ul>
         <li>O número maior sempre será subtraido pelo menor.</li>
         <li>Não serão permitidos valores vazios ou não numéricos.</li>
      </ul>
+     </section>
     <!--Definindo java script da página-->
      <script src="script.js"></script>   
 </body>

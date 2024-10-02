@@ -13,7 +13,7 @@ function calcular(){
     if (tn1.value.length == 0 || tn2.value.length == 0 || tn3.value.length == 0 ){
         res.innerHTML = "Favor Digitar um valor válido!!";
     }else { if (v1 > 0) {
-        res.innerHTML = `A raiz quadrada do valor ${v1} é: ${Math.sqrt(v1).toFixed(2)}` ;
+        res.innerHTML = `A raiz quadrada do valor ${v1} é: ${Math.sqrt(v1).toFixed(1)}` ;
     }else {
         res.innerHTML = `O quadrado do valor ${v1} é: ${v1 * v1}`;
     }
