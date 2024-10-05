@@ -28,8 +28,10 @@ function subtrair(){
         }
     }
     function limpar(){
-        var inputVal = window.document.querySelector('input[type=Number]');
-        inputVal.value = " ";
+        var n1 = window.document.getElementById('n1');
+        var n2 = window.document.getElementById('n2');
+        n1.value = " ";
+        n2.value = " ";
         res.innerHTML = "Resultado";
     }
 

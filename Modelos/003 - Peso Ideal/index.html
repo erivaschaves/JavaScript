@@ -8,25 +8,27 @@
     <link rel="stylesheet" href="style.css">  
 </head>
 <body>
-    <!--Título-->
-    <h1>Cálculo de Peso Ideal</h1>
-    <!--Criando labels ,inputs e botões-->
-    <label for="alt">Altura</label>
-    <input type="number" name="alt" id="alt" value="0" required>
-    <fieldset>
-        <!--Deixando a opção masculino default-->
-        <legend>Sexo</legend>
-        <input type="radio" name="sexo" id="mas" checked>
-        <label for="mas">Masculino</label><br>
-        <input type="radio" name="sexo" id="fem" >
-        <label for="fem">Feminino</label>
-    </fieldset>
-    <p>
-        <input type="button" value="Calcular" onclick="calcular()">
-        <input type="submit" value="Limpar" onclick="limpar()">
-    </p>
-    <!--Mostrando resultado-->
-    <div id="res">Resultado</div>
+    <section>
+        <!--Título-->
+        <h1>Cálculo de Peso Ideal</h1>
+        <!--Criando labels ,inputs e botões-->
+        <label for="alt">Altura</label>
+        <input type="number" name="alt" id="alt" value="0" min="1" required>
+        <fieldset>
+            <!--Deixando a opção masculino default-->
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="mas" checked>
+            <label for="mas">Masculino</label><br>
+            <input type="radio" name="sexo" id="fem" >
+            <label for="fem">Feminino</label>
+        </fieldset>
+        <p>
+            <input type="button" value="Calcular" id="calcular" onclick="calcular()">
+            <input type="submit" value="Limpar" id="limpar" onclick="limpar()">
+        </p>
+        <!--Mostrando resultado-->
+        <div id="res">Resultado</div>
+    </section>
     <!--Definindo função Calcular-->
     <script src="script.js"></script>  
 </body>
