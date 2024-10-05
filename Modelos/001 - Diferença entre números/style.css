@@ -33,6 +33,7 @@ section h2 {
 section ul {
     margin-top: 2px; /*Distância para margem superior*/
     margin-bottom: 2px; /*Distância para margem inferior*/
+    text-align: left;
 }
 /*Configurações da tag input*/
 input{
@@ -43,8 +44,6 @@ input{
 }
 /*Configurações da div res*/
 div#res {
-    display: flex;
-    flex-direction: row;
     background: grey;
     border-radius: 10px;
     padding: 5px;

@@ -15,19 +15,18 @@ function subtrair(){
     }else
     //Caso n1 seja maior que n2. 
     if(n1>n2){
-        res.innerHTML = `${n1} é maior que ${n2}, a diferença entre eles é <strong>${s}</strong>.`;
+        res.innerHTML = `${n1} é maior que ${n2}, a diferença entre eles é: <strong>${s}</strong>.`;
     }else 
     //Caso n2 seja maior que n1.
     if (n1<n2){
         s = n2 - n1;                
-        res.innerHTML = `${n2} é maior que ${n1}, a diferença entre eles é <strong>${s}</strong>.`;
+        res.innerHTML = `${n2} é maior que ${n1}, a diferença entre eles é:  <strong>${s}</strong>.`;
     }
     //Caso sejam iguais.
     else{
-            res.innerHTML = `Os Números são iguais, a diferença é <strong>${s}</strong>.`;
+            res.innerHTML = `Os Números são iguais, a diferença é: <strong>${s}</strong>.`;
         }
     }
-
     function limpar(){
         var inputVal = window.document.querySelector('input[type=Number]');
         inputVal.value = " ";

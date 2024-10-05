@@ -6,8 +6,8 @@ body {
     justify-content: center; /*Definindo espaços entre e ao redor dos itens ao centro*/
     align-items: center; /*Alinhando itens ao centro*/
     background-color:#5f2c82;/*Definindo cor de fundo*/
-    width: 100vw;/*Definindo largura*/
-    height: 100vh;/*Definindo altura*/
+    width: 100%;/*Definindo largura*/
+    height: 100%;/*Definindo altura*/
     background-image: linear-gradient(to top, #49a09d, #5f2c82); /*gradiente linear ao fundo*/
     font: normal 13pt Arial;/*Definindo a fonte*/
     text-align: center;/*Alinhanto texto ao centro*/  
@@ -33,6 +33,7 @@ section h2 {
 section ul {
     margin-top: 2px; /*Distância para margem superior*/
     margin-bottom: 2px; /*Distância para margem inferior*/
+    text-align: left;/*Alinhando texto a esquerda*/
 }
 /*Configurações da tag input*/
 input{
@@ -58,3 +59,4 @@ div#res {
    border-radius: 10px;/*Arredondando as bordas do elemento*/
    cursor: pointer;/*Modifica o cursor do mouse para pointer*/
 }
+
