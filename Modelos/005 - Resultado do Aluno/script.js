@@ -14,7 +14,7 @@ function validar(){
     // Validando valores faltantes e o resultado do aluno com uma casa decimal.
     if (tn1.value.length == 0 || tn2.value.length == 0 ||tfreq.value.length == 0){       
         res.innerHTML = '';
-        res.innerHTML += "Faltam Dados";  
+        res.innerHTML += "Valor inválido ou Faltam Dados";  
     }else if (media > 10 || freq < 0 || freq > 40){
             res.innerHTML = '';
             res.innerHTML += "Valor inválido, notas entre 0 e 10 e frequência entre 0 e 40!!!";} else {
@@ -25,9 +25,13 @@ function validar(){
             }
         }          
 }
-// Definindo função limpar
+//Definindo função limpar
 function limpar(){
-    var inputVal = window.document.querySelector('input[type=Number]');
-    inputVal.value = " ";
+    var n1 = window.document.getElementById('n1');
+    var n2 = window.document.getElementById('n2');
+    var freq = window.document.getElementById('freq');
+    n1.value = " ";
+    n2.value = " ";
+    freq.value = " ";
     res.innerHTML = "Resultado";
 }

@@ -21,16 +21,20 @@ function validar(){
     }else if ( v1 != v2 && v1 != v3 && v2 != v3){
         res.innerHTML = "Triângulo escaleno.";
         img.src = 'Escaleno.png';
-    }else if( (v1 == v2 && v1!= v3) ||(v1 == v3 &&  v1 != v2 ) ){
+    }else if( (v1 == v2 && v1!= v3) ||(v1 == v3 &&  v1 != v2 ) ||(v2 == v3 &&  v2 != v1 ) ){
         res.innerHTML = "Triângulo isóceles.";
         img.src = 'Isósceles.png';
     }
 }
 
-// Definindo função limpar
+//Defindo função limpar
 function limpar(){
-    var inputVal = window.document.querySelector('input[type=Number]');
-    inputVal.value = " ";
+    var n1 = window.document.getElementById('v1');
+    var n2 = window.document.getElementById('v2');
+    var n3 = window.document.getElementById('v3');
+    n1.value = " ";
+    n2.value = " ";
+    n3.value = " ";
     res.innerHTML = "Resultado";
     img.src = 'Interrogação.png';
 }

@@ -25,7 +25,7 @@ section {
     box-shadow: 0px 0px 10px rgb(0, 0, 0.450);/*Criando sombreamento*/
 }
 /*Configurações da tag section h2*/
-section h1,h2 {
+section h2 {
     margin-top: 20px;/*Distância para margem superior*/
     margin-bottom: 5px; /*Distância para margem inferior*/
 }
@@ -36,7 +36,7 @@ section ul {
     text-align: left;/*Alinhando texto a esquerda*/
 }
 /*Configurações da tag input*/
-input {
+input{
     font: normal 15pt Arial;
     width: 100px;
     border: 1px solid blue; /*Criando contorno de 1px*/
@@ -46,35 +46,17 @@ input {
 div#res {
     display: flex;
     flex-direction: column;
-    background: grey;
+    background: grey;/*Cor de fundo do resultado*/
     border-radius: 10px;
     padding: 5px;
 }
 /*Configurações dos botões calcular e limpar*/  
 #validar, #limpar {
-   margin-top: 5px;
    padding: 5px;
    background: blue;/*Definindo cor de fundo do botão*/
-   border: none;
-   color: white;
+   border: none; /*Retirando a borda*/
+   color: white; /*Cor da letra dos botões*/
    border-radius: 10px;/*Arredondando as bordas do elemento*/
    cursor: pointer;/*Modifica o cursor do mouse para pointer*/
 }
-/*Configurações da tag table*/
-table {
-    width: 500px;/*Largura da tabela*/
-    border-collapse: collapse;
-    position: relative;
-}
-/*Configurações das tags td e th*/
-td, th {
-    border: 1px solid black;/*Criando contorno de 1px*/
-    padding: 5px;/*Definindo distância dos elementos para borda*/
-}
-/*Configurações da tag caption*/
-caption {
-    font-size: 1.5em;/*Defindo tamanho da fonte*/
-    font-weight: bold; /*Negrito*/
-    padding: 10px;
-    background-color: lightgray;/*Definindo cor de fundo*/
-}
+

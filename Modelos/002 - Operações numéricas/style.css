@@ -46,7 +46,7 @@ input{
 div#res {
     display: flex;
     flex-direction: column;
-    background: grey;
+    background: grey;/*Cor de fundo do resultado*/
     border-radius: 10px;
     padding: 5px;
 }
@@ -54,8 +54,8 @@ div#res {
 #calcular, #limpar {
    padding: 5px;
    background: blue;/*Definindo cor de fundo do botão*/
-   border: none;
-   color: white;
+   border: none; /*Retirando a borda*/
+   color: white; /*Cor da letra dos botões*/
    border-radius: 10px;/*Arredondando as bordas do elemento*/
    cursor: pointer;/*Modifica o cursor do mouse para pointer*/
 }

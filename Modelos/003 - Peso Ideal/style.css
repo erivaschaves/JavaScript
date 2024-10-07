@@ -36,12 +36,25 @@ section ul {
     text-align: left;/*Alinhando texto a esquerda*/
 }
 /*Configurações da tag input*/
-input{
+input {
     font: normal 15pt Arial;
     width: 100px;
     border: 1px solid blue; /*Criando contorno de 1px*/
     border-radius: 10px;/*Arredondando as bordas do elemento*/
 }
+label{
+    justify-content: left;
+}
+/*Configurações da tag feildset*/
+fieldset {
+    display: flex;
+    flex-direction: row;
+}
+/*Configurações da tag input mas e fem*/
+input#mas, input#fem{
+    width: auto;
+}
+
 /*Configurações da div res*/
 div#res {
     display: flex;

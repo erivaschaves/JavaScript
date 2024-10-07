@@ -28,6 +28,7 @@ function calcular(){
     }
 }
 }
+//Definindo função limpar
 function limpar(){
     var n1 = window.document.getElementById('v1');
     var n2 = window.document.getElementById('v2');
