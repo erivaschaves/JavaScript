@@ -8,55 +8,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--Título-->
-    <h1>Saldo Médio</h1>
-    <!--Criando labels ,inputs e botões-->
-        <label for="saldo">Informe o saldo médio do cliente: </label>
-        <input type="number" name="saldo" id="saldo" min="0" value="1" required >
-        <p>
-            <input type="button" value="Calcular" onclick="calcular()">
-            <input type="reset" value="Limpar" onclick="limpar()">
-        </p>
-    <!--Exibindo Resultados-->
-    <div id="res">Resultado</div>
-    
-    <!--Regras de execução do programa-->
-    <h2>Regras de execução do programa</h2>
-    <ul>
-        <li>Não serão permitidos valores vazios ou não numéricos.</li>
-        <li>O saldo médio deve ser no mínimo 1.</li>
-        <li>Dependendo do valor do saldo,haverá crédito conforme a seguinte tabela.</li>
-
-    </ul>
-    <!--Tabela de crédito por saldo-->
-    <table>
-        <caption>Tabela de crédito por saldo</caption>
-        <!--Cabeçalho da Tabela-->
-        <thead>
-            <th scope="col">Saldo</th>
-            <th scope="row" style="width: 50px;">Crédito</th>
-        </thead>
-        <!--Corpo da Tabela-->
-        <tr>
-            <td>Menor de que R$ 201.</td>
-            <td>Nenhum crédito.</td>
-        </tr>
-
-        </tr>
-            <td>Entre R$201 e R$400.</td>
-            <td>Crédito de 20%.</td>
-        </tr>
-
-        </tr>
-            <td>Entre R$401 e R$600</td>
-            <td>Crédito de 30%.</td>
-        </tr>
-
-        </tr>
-            <td>Maior que R$600</td>
-            <td>Crédito de 40%.</td>
-        </tr>
-    </table>
+    <section>
+        <!--Título-->
+        <h1>Saldo Médio</h1>
+        <!--Criando labels ,inputs e botões-->
+            <label for="saldo">Informe o saldo médio do cliente: </label>
+            <input type="number" name="saldo" id="saldo" min="0" value="1" required >
+            <p>
+                <input type="button" value="Calcular" id="calcular" onclick="calcular()">
+                <input type="reset" value="Limpar" id="limpar" onclick="limpar()">
+            </p>
+        <!--Exibindo Resultados-->
+        <div id="res">Resultado</div>
+        
+        <!--Regras de execução do programa-->
+        <h2>Regras de execução do programa</h2>
+        <ul>
+            <li>Não serão permitidos valores vazios ou não numéricos.</li>
+            <li>O saldo médio deve ser no mínimo 1.</li>
+            <li>Dependendo do valor do saldo,haverá crédito conforme a seguinte tabela.</li>
+        </ul>
+        <!--Tabela de crédito por saldo-->
+        <table>
+            <caption>Tabela de crédito por saldo</caption>
+            <!--Cabeçalho da Tabela-->
+            <thead>
+                <th scope="col" style="width: 30px;">Saldo</th>
+                <th scope="row" style="width: 50px;">Crédito</th>
+            </thead>
+            <!--Corpo da Tabela-->
+            <tr>
+                <td>Menor de que R$ 201.</td>
+                <td>Nenhum crédito.</td>
+            </tr>
+            </tr>
+                <td>Entre R$201 e R$400.</td>
+                <td>Crédito de 20%.</td>
+            </tr>
+            </tr>
+                <td>Entre R$401 e R$600</td>
+                <td>Crédito de 30%.</td>
+            </tr>
+            </tr>
+                <td>Maior que R$600</td>
+                <td>Crédito de 40%.</td>
+            </tr>
+        </table>
+    </section>
     <!--Definindo script da página-->
     <script src="script.js"></script>
     
