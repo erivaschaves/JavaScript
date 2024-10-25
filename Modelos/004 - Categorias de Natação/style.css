@@ -62,7 +62,7 @@ div#res {
 }
 /*Configurações da tag table*/
 table {
-    width: 500px;/*Largura da tabela*/
+    width: 450px;/*Largura da tabela*/
     border-collapse: collapse;
     position: relative;
 }
