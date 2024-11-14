@@ -11,9 +11,9 @@ body {
     background-image: linear-gradient(to top, #49a09d, #5f2c82); /*gradiente linear ao fundo*/
     font: normal 13pt arial;/*Definindo a fonte*/
     text-align: center;/*Alinhanto texto ao centro*/
-    color: white; /*Cor do texto*/ 
+    color: white; /*Cor do texto*/
+    text-shadow: 1px 1px black; /*sombra do texto*/
 }
-/*Configurações da tag section*/
 /*Configurações da tag section*/
 section {
     display: flex;
@@ -78,6 +78,7 @@ table {
 td, th {
     border: 1px solid black;/*Criando contorno de 1px*/
     padding: 5px;/*Definindo distância dos elementos para borda*/
+    text-shadow: 1px 1px black; /*sombra do texto*/
 }
 /*Configurações da tag caption*/
 caption {
